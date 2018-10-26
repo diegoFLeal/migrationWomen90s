@@ -230,7 +230,7 @@ data2<-subset(data,risk_set==1,select=c("orig","dest"))
 net2<-net
 net2[,]<-0
 
-#make net2 be a binary matrix where 1 indicates that countries in a given dyad/cell are inlcuded in net2
+#make net2 be a binary matrix where 1 indicates that countries in a given dyad/cell are included in net2
 for (i in 1:nrow(data2))
 {
   orig<-data2[i,1]
@@ -327,12 +327,12 @@ gplot(dat=graph,
       label.pos=5,                                   ## nodes' labels should be inside the nodes
       edge.col= rgb(red=0,green=0,blue=0,alpha=0.25),## make ties clear grayish
       displayisolates = TRUE,                        ## show isolates
-      vertex.cex = ((ideg)/28)+1,                    ## make nodes' size a function of theiir number of ties/flows
+      vertex.cex = ((ideg)/28)+1,                    ## make nodes' size a function of their number of ties/flows
       vertex.border="grey",                          ## make nodes' borders be gray
       label.cex = 0.8,                               ## label size
       vertex.col=nodeColors,                         ## nodes' color are a function of geographic region
       label.col="black",                             ## label color
-      edge.lwd = ((get.edge.value(graph,"value"))) / 10000 # edge width is a fuinction of flo3 size
+      edge.lwd = ((get.edge.value(graph,"value"))) / 10000 # edge width is a function of flow size
 )
 
 #close the pdf
